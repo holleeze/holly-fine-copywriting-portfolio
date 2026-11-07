@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Holly Fine — Copywriter</title>
+<meta content="Holly Fine writes brand copy that sounds like people. Sponsor copy, brand voice, scripts and poetry." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&amp;family=DM+Sans:wght@400;500;700&amp;family=Space+Mono:wght@400;700&amp;family=Barlow+Condensed:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --paper: #fbf7f1;
+    --card: #ffffff;
+    --ink: #2b2a33;
+    --muted: #6b6772;
+    --pine: #2f5d50;
+    --blush: #f3d9d6;
+    --rose: #c9647a;
+    --line: #ebe3d8;
+    --radius: 8px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 17px/1.65 "DM Sans", system-ui, sans-serif;
+  }
+  a { color: var(--pine); text-underline-offset: 3px; }
+  a:hover { color: var(--rose); }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+  /* Nav */
+  nav { padding: 22px 0; }
+  nav .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .logo { font-family: "Fraunces", serif; font-weight: 600; font-size: 20px; color: var(--ink); text-decoration: none; }
+  .logo span { color: var(--rose); }
+  nav ul { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; font-size: 15px; }
+  nav ul a { color: var(--muted); text-decoration: none; }
+  nav ul a:hover { color: var(--ink); }
+
+  /* Hero */
+  header.hero { padding: 56px 0 40px; }
+  .eyebrow {
+    display: inline-block; background: #fff6f5; color: #8a3b4d;
+    font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+    padding: 6px 14px; border: 1.5px solid #8a3b4d; border-radius: 4px;
+    box-shadow: 0 3px 0 #8a3b4d; margin-bottom: 24px;
+  }
+  @media print { .eyebrow { box-shadow: none; } }
+  h1 {
+    font-family: "Fraunces", serif; font-weight: 400; font-size: clamp(38px, 6vw, 56px);
+    line-height: 1.12; margin: 0 0 20px; letter-spacing: -.01em;
+  }
+  h1 em { color: var(--pine); }
+  .lead { font-size: 19px; color: var(--muted); max-width: 590px; margin: 0; }
+  .sparkle { color: var(--rose); }
+
+  /* Sections */
+  section { padding: 36px 0; }
+  h2 {
+    font-family: "Fraunces", serif; font-weight: 600; font-size: 28px; margin: 0 0 6px;
+  }
+  .section-sub { color: var(--muted); margin: 0 0 28px; }
+
+  /* Work cards */
+  .work {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 30px 30px 26px; margin-bottom: 26px;
+    box-shadow: 0 2px 0 var(--line);
+  }
+  .work.featured { border: 2px solid var(--pine); box-shadow: 6px 6px 0 var(--blush); }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; }
+  /* Typewriter-key shape: outlined key with a solid "base" underneath */
+  .tag {
+    font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+    padding: 5px 12px; background: #fff; color: var(--pine);
+    border: 1.5px solid var(--pine); border-radius: 4px;
+    box-shadow: 0 3px 0 var(--pine);
+  }
+  .tag.pink { background: #fff6f5; color: #8a3b4d; border-color: #8a3b4d; box-shadow: 0 3px 0 #8a3b4d; }
+  @media print { .tag { box-shadow: none; } }
+  .work h3 { font-family: "Fraunces", serif; font-weight: 600; font-size: 24px; margin: 0 0 6px; }
+  .brief { color: var(--muted); margin: 0 0 20px; }
+  .script {
+    border-left: 3px solid var(--blush); padding: 4px 0 4px 20px; margin: 0 0 16px;
+  }
+  .script p { margin: 0 0 12px; }
+  .script p:last-child { margin-bottom: 0; }
+  .who {
+    font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--rose); margin-right: 6px;
+  }
+  .note { font-size: 14px; color: var(--muted); margin: 18px 0 0; }
+  .clip {
+    margin: 20px 0 0; border-radius: 6px; overflow: hidden; background: #f4efe7;
+    aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center;
+    color: var(--muted); font-size: 14px; border: 1px dashed var(--line);
+  }
+  .clip iframe { width: 100%; height: 100%; border: 0; }
+
+  /* Context strip */
+  .context {
+    background: var(--pine); color: #f4f1ea; border-radius: var(--radius);
+    padding: 26px 30px; margin-bottom: 30px;
+  }
+  .context p { margin: 0; }
+  .context strong { color: #fff; }
+
+  /* More writing */
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .mini {
+    background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 20px;
+  }
+  .mini h4 { font-family: "Fraunces", serif; font-size: 19px; font-weight: 600; margin: 0 0 6px; }
+  .mini p { margin: 0; font-size: 15px; color: var(--muted); }
+
+  /* About + contact */
+  .about p { margin: 0 0 14px; }
+  footer {
+    margin-top: 30px; padding: 44px 0 60px; text-align: center;
+    border-top: 1px solid var(--line);
+  }
+  footer h2 { margin-bottom: 10px; }
+  .btn {
+    display: inline-block; background: var(--ink); color: #fff; text-decoration: none;
+    padding: 12px 26px; border-radius: 6px; font-weight: 700; margin: 10px 6px 0;
+  }
+  .btn:hover { background: var(--pine); color: #fff; }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+  .btn.ghost:hover { background: var(--ink); color: #fff; }
+  .tiny { font-size: 13px; color: var(--muted); margin-top: 26px; }
+
+  @media (max-width: 560px) {
+    .work, .context { padding: 22px 20px; }
+    nav ul { gap: 16px; }
+  }
+
+  /* ---------- Stream-style cards for the Fight Night samples ---------- */
+  .work.stream {
+    background: #17151f; color: #ece8f4; border: 2px solid #17151f;
+    box-shadow: 6px 6px 0 #7c5cff; padding-top: 0; overflow: hidden;
+  }
+  .work.stream.featured { border-color: #17151f; box-shadow: 6px 6px 0 var(--rose); }
+  .live-bar {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    margin: 0 -30px 22px; padding: 10px 30px;
+    background: #221f2e; border-bottom: 1px solid #2f2b3e;
+    font: 700 12px "Space Mono", monospace; color: #a9a3b8; letter-spacing: .04em;
+  }
+  .live-dot {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #e5484d; color: #fff; padding: 2px 8px; border-radius: 3px;
+    font-family: "Space Mono", monospace; font-weight: 700; font-size: 11px;
+  }
+  .live-dot::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #fff; }
+  .live-bar .viewers { margin-left: auto; color: #7f798f; }
+  .work.stream h3 { color: #fff; }
+  .work.stream .brief { color: #b7b1c6; }
+  .work.stream .script {
+    border-left: 0; padding: 14px 16px; background: #1f1c29;
+    border: 1px solid #2f2b3e; border-radius: 6px;
+  }
+  .work.stream .script p { font-size: 15.5px; }
+  .work.stream .who {
+    font-family: "Space Mono", monospace; font-size: 13px; letter-spacing: 0; text-transform: none;
+    color: #c9a7ff; margin-right: 8px;
+  }
+  .work.stream .who::after { content: ":"; }
+  .work.stream .who.aj { color: #5ee0b4; }
+  .work.stream .who.cb { color: #ff8fb1; }
+  .work.stream strong { color: #fff; background: #7c5cff33; padding: 0 3px; border-radius: 2px; }
+  .work.stream .note { color: #7f798f; font-family: "Space Mono", monospace; font-size: 12.5px; }
+  .work.stream .tag { background: #221f2e; color: #5ee0b4; border-color: #5ee0b4; box-shadow: 0 3px 0 #5ee0b4; }
+  .work.stream .tag.pink { background: #221f2e; color: #ff8fb1; border-color: #ff8fb1; box-shadow: 0 3px 0 #ff8fb1; }
+  @media (max-width: 560px) { .live-bar { margin: 0 -20px 18px; padding: 10px 20px; } }
+  @media print {
+    .work.stream { background: #fff; color: var(--ink); border: 1px solid var(--line); box-shadow: none; }
+    .work.stream h3 { color: var(--ink); }
+    .work.stream .script { background: #fff; }
+    .live-bar { background: #fff; }
+  }
+
+  /* ---------- Nature band above the work ---------- */
+  .band {
+    position: relative; background: #e4eff2; margin: 8px 0 0;
+    padding: 52px 0 120px; overflow: hidden;
+  }
+  .band .wrap { position: relative; z-index: 1; }
+  .band h2 { margin-bottom: 8px; }
+  .band .section-sub { margin-bottom: 26px; color: #557079; }
+  .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; }
+  .skill {
+    background: rgba(255,255,255,.75); border: 1px solid #cfe0e5; border-radius: 6px; padding: 18px 18px 16px;
+  }
+  .skill .ic { font-size: 18px; color: var(--pine); display: block; margin-bottom: 6px; }
+  .skill h4 { font-family: "Fraunces", serif; font-size: 18px; font-weight: 600; margin: 0 0 4px; }
+  .skill p { margin: 0; font-size: 14.5px; color: #4f646b; line-height: 1.5; }
+  .band svg.hills { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; height: 110px; }
+  .band + main section#work { padding-top: 40px; }
+  @media print { .band { background: #fff; padding-bottom: 30px; } .band svg.hills { display: none; } }
+
+  /* ---------- Spec social posts ---------- */
+  .spec-note { font-size: 14px; color: var(--muted); margin: -16px 0 24px; }
+  .posts { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
+  .post {
+    background: #fff; border: 1px solid #dbdbdb; border-radius: 8px; overflow: hidden;
+    font-family: -apple-system, "Segoe UI", "DM Sans", sans-serif; color: #262626;
+  }
+  .post-head { display: flex; align-items: center; gap: 10px; padding: 11px 14px; }
+  .post-avatar {
+    width: 32px; height: 32px; border-radius: 50%; flex: none;
+    background: var(--pine); color: #fff; font: 700 13px "DM Sans", sans-serif;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3.5px var(--rose);
+  }
+  .post-handle { font-weight: 600; font-size: 14px; }
+  .post-loc { font-size: 12px; color: #737373; }
+  .post-spec {
+    margin-left: auto; font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+    color: #8a3b4d; border: 1.5px solid #8a3b4d; border-radius: 4px; padding: 2px 7px;
+  }
+  .post-img {
+    aspect-ratio: 4 / 5; background: linear-gradient(160deg, #cfe3dc 0%, #e4eff2 55%, #f3d9d6 100%);
+    display: flex; align-items: center; justify-content: center; color: #557079; font-size: 14px;
+  }
+  .post-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .post-actions { display: flex; gap: 14px; padding: 10px 14px 4px; }
+  .post-actions svg { width: 24px; height: 24px; fill: none; stroke: #262626; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .post-actions .save { margin-left: auto; }
+  .post-likes { font-size: 14px; font-weight: 600; padding: 2px 14px; }
+  .post-caption { font-size: 14px; line-height: 1.45; padding: 4px 14px 16px; margin: 0; }
+  .post-caption b { font-weight: 600; margin-right: 4px; }
+  .post-caption .tags { color: #00376b; }
+  @media print { .post { break-inside: avoid; } }
+  @media print {
+    nav, .clip, .btn { display: none !important; }
+    body { background: #fff; font-size: 12pt; }
+    .work { break-inside: avoid; box-shadow: none; }
+    .work.featured { box-shadow: none; }
+    header.hero { padding-top: 0; }
+  }
+
+  /* ================= Nordic bold theme ================= */
+  :root {
+    --paper: #f7f6f2;
+    --card: #ffffff;
+    --ink: #1e2421;
+    --muted: #5d6460;
+    --pine: #2e4a3c;
+    --blush: #ecdcd6;
+    --rose: #b4473b;
+    --line: #e2e0d9;
+    --display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  }
+  body { background: var(--paper); }
+  .logo { font-family: var(--display); font-weight: 800; font-size: 24px; letter-spacing: .02em; text-transform: uppercase; }
+  .logo span { color: var(--rose); }
+  nav ul a { text-transform: uppercase; letter-spacing: .08em; font-size: 13px; font-weight: 700; }
+  header.hero { padding: 80px 0 64px; }
+  h1 {
+    font-family: var(--display); font-weight: 800; text-transform: uppercase;
+    font-size: clamp(46px, 8vw, 84px); line-height: .95; letter-spacing: .005em; margin-bottom: 26px;
+  }
+  h1 em { font-style: normal; color: var(--pine); }
+  .sparkle { color: var(--rose); font-size: .6em; vertical-align: .35em; }
+  .lead { font-size: 19px; color: var(--muted); }
+  h2 { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: 38px; letter-spacing: .01em; line-height: 1; }
+  .work h3, .mini h4, .skill h4 {
+    font-family: var(--display); font-weight: 700; text-transform: uppercase; letter-spacing: .02em;
+  }
+  .work h3 { font-size: 30px; line-height: 1.05; margin-bottom: 10px; }
+  .mini h4, .skill h4 { font-size: 21px; }
+  .eyebrow { background: #fff; color: var(--rose); border-color: var(--rose); box-shadow: 0 3px 0 var(--rose); }
+  .context { background: var(--pine); border-radius: 4px; }
+  .work { border-radius: 4px; }
+  .mini, .skill { border-radius: 4px; }
+  .band { background: #e3ecee; padding-top: 64px; }
+  .band h2 { font-size: 44px; }
+  .skill .ic { color: var(--rose); }
+  section { padding: 48px 0; }
+  .btn { text-transform: uppercase; letter-spacing: .08em; font-size: 14px; border-radius: 4px; }
+  footer h2 { font-size: 44px; }
+  .work.stream.featured { box-shadow: 6px 6px 0 var(--rose); }
+  .work.stream h3 { font-size: 30px; }
+
+  /* ================= Northern lights hero ================= */
+  .sky {
+    position: relative; overflow: hidden; color: #eef4f2;
+    background:
+      radial-gradient(1.5px 1.5px at 12% 18%, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 27% 42%, #fff 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 44% 12%, #dff 50%, transparent 51%),
+      radial-gradient(1px 1px at 63% 30%, #fff 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 78% 8%, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 88% 46%, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 6% 62%, #fff 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 54% 58%, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 93% 70%, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 35% 78%, #fff 50%, transparent 51%),
+      linear-gradient(180deg, #07101c 0%, #0c1b2a 55%, #13283a 100%);
+  }
+  .aurora { position: absolute; inset: 0; pointer-events: none; filter: blur(38px); opacity: .85; }
+  .aurora span { position: absolute; display: block; border-radius: 50%; mix-blend-mode: screen; }
+  .aurora span:nth-child(1) {
+    width: 80%; height: 46%; left: -10%; top: 4%;
+    background: radial-gradient(ellipse at center, rgba(64,230,170,.75), rgba(64,230,170,0) 70%);
+    transform: rotate(-12deg); animation: drift1 18s ease-in-out infinite alternate;
+  }
+  .aurora span:nth-child(2) {
+    width: 70%; height: 40%; right: -8%; top: 12%;
+    background: radial-gradient(ellipse at center, rgba(120,110,255,.6), rgba(120,110,255,0) 70%);
+    transform: rotate(10deg); animation: drift2 22s ease-in-out infinite alternate;
+  }
+  .aurora span:nth-child(3) {
+    width: 60%; height: 34%; left: 22%; top: 30%;
+    background: radial-gradient(ellipse at center, rgba(70,200,230,.55), rgba(70,200,230,0) 70%);
+    animation: drift1 26s ease-in-out infinite alternate-reverse;
+  }
+  @keyframes drift1 { from { transform: translateX(-4%) rotate(-12deg) scaleY(1); } to { transform: translateX(6%) rotate(-6deg) scaleY(1.2); } }
+  @keyframes drift2 { from { transform: translateX(4%) rotate(10deg); } to { transform: translateX(-6%) rotate(4deg) scaleY(1.15); } }
+  @media (prefers-reduced-motion: reduce) { .aurora span { animation: none !important; } }
+  .sky nav, .sky header.hero { position: relative; z-index: 1; }
+  .sky .logo, .sky nav ul a { color: #eef4f2; }
+  .sky nav ul a:hover { color: #7ff0c6; }
+  .sky .logo span { color: #7ff0c6; }
+  .sky h1 { color: #fff; }
+  .sky h1 em { color: #7ff0c6; }
+  .sky .sparkle { color: #b6a8ff; }
+  .sky .lead { color: #b9c9cf; }
+  .sky .eyebrow { background: transparent; color: #7ff0c6; border-color: #7ff0c6; box-shadow: 0 3px 0 #7ff0c6; }
+  .sky header.hero { padding-bottom: 96px; }
+  .sky + .band { margin-top: 0; }
+  @media print {
+    .sky { background: #fff; color: var(--ink); } .aurora { display: none; }
+    .sky h1, .sky .logo { color: var(--ink); } .sky .lead { color: var(--muted); }
+  }
+
+  /* ================= Voice switcher ================= */
+  .switcher {
+    background: var(--card); border: 1px solid var(--line); border-radius: 4px;
+    padding: 30px; box-shadow: 6px 6px 0 #cfe3dc;
+  }
+  .switcher-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 22px; }
+  .product-name { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: 26px; letter-spacing: .02em; margin: 0; }
+  .voices { display: inline-flex; border: 1.5px solid var(--ink); border-radius: 4px; overflow: hidden; }
+  .voices button {
+    font: 700 13px "DM Sans", sans-serif; letter-spacing: .08em; text-transform: uppercase;
+    background: transparent; color: var(--ink); border: 0; padding: 9px 16px; cursor: pointer;
+  }
+  .voices button + button { border-left: 1.5px solid var(--ink); }
+  .voices button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+  .voices button:focus-visible { outline: 2px solid var(--rose); outline-offset: 2px; }
+  .voice-panel { display: none; font-size: 20px; line-height: 1.55; margin: 0; }
+  .voice-panel.on { display: block; animation: fadeUp .35s ease both; }
+  .voice-panel[data-voice="hype"] { font-family: var(--display); font-weight: 700; font-size: 28px; line-height: 1.2; text-transform: uppercase; }
+  .voice-panel[data-voice="playful"] { color: var(--pine); }
+  .voice-label { display: block; font: 700 12px "DM Sans", sans-serif; letter-spacing: .1em; text-transform: uppercase; color: var(--rose); margin-bottom: 8px; }
+  .switcher-note { font-size: 14px; color: var(--muted); margin: 22px 0 0; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .voice-panel.on { animation: none; } }
+  .editing .voice-panel { display: block; margin-bottom: 18px; }
+  @media print { .voice-panel { display: block; margin-bottom: 14px; } .voices { display: none; } .switcher { box-shadow: none; } }
+
+  /* ================= Full-page northern lights theme ================= */
+  :root {
+    --paper: #0a1520;
+    --card: rgba(255,255,255,.055);
+    --ink: #e8f0ee;
+    --muted: #9db1b6;
+    --pine: #7ff0c6;
+    --rose: #b6a8ff;
+    --blush: rgba(182,168,255,.22);
+    --line: rgba(255,255,255,.12);
+  }
+  html { background: #0a1520; }
+  body {
+    color: var(--ink);
+    background:
+      radial-gradient(1.5px 1.5px at 12% 18%, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 27% 42%, #fff 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 44% 12%, #dff 50%, transparent 51%),
+      radial-gradient(1px 1px at 63% 30%, #fff 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 78% 8%, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 88% 46%, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 6% 62%, #fff 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 54% 58%, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 93% 70%, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 35% 78%, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 71% 88%, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 18% 92%, #fff 50%, transparent 51%),
+      linear-gradient(180deg, #07101c 0%, #0c1b2a 50%, #102536 100%);
+    background-attachment: fixed;
+  }
+  .sky { background: transparent; }
+  .aurora { position: fixed; z-index: 0; }
+  body > *:not(.sky) { position: relative; z-index: 1; }
+  .sky > *:not(.aurora) { position: relative; z-index: 1; }
+  a { color: var(--pine); }
+  a:hover { color: #fff; }
+  h2, .work h3, .mini h4, .skill h4, .product-name { color: #fff; }
+  .section-sub, .brief, .note, .spec-note, .switcher-note, .mini p, .skill p, .about p { color: var(--muted); }
+  .about p { color: #c6d4d6; }
+
+  /* band: drop the light blue and hills, keep the content */
+  .band { background: transparent; padding: 56px 0 24px; }
+  .band svg.hills { display: none; }
+  .band .section-sub { color: var(--muted); }
+
+  /* glass cards */
+  .work, .mini, .skill, .switcher {
+    background: var(--card); border: 1px solid var(--line);
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    box-shadow: none;
+  }
+  .skill .ic { color: var(--rose); }
+  .context {
+    background: rgba(127,240,198,.10); border: 1px solid rgba(127,240,198,.35); color: var(--ink);
+  }
+  .context strong { color: var(--pine); }
+  .script { border-left-color: rgba(182,168,255,.5); }
+  .who { color: var(--rose); }
+
+  /* labels */
+  .tag { background: transparent; color: var(--pine); border-color: var(--pine); box-shadow: 0 3px 0 var(--pine); }
+  .tag.pink { background: transparent; color: var(--rose); border-color: var(--rose); box-shadow: 0 3px 0 var(--rose); }
+
+  /* stream cards keep their look, with aurora-colored shadows */
+  .work.stream { background: #120f1c; border-color: #241f33; box-shadow: 6px 6px 0 rgba(127,240,198,.55); }
+  .work.stream.featured { box-shadow: 6px 6px 0 var(--rose); }
+
+  /* voice switcher */
+  .switcher { box-shadow: 6px 6px 0 rgba(127,240,198,.35); }
+  .voices { border-color: rgba(255,255,255,.4); }
+  .voices button { color: var(--ink); }
+  .voices button + button { border-left-color: rgba(255,255,255,.4); }
+  .voices button[aria-pressed="true"] { background: var(--pine); color: #08131b; }
+  .voice-panel { color: var(--ink); }
+  .voice-panel[data-voice="playful"] { color: var(--pine); }
+  .voice-label { color: var(--rose); }
+
+  /* social posts in dark mode */
+  .post { background: #0f1b26; border-color: var(--line); color: var(--ink); }
+  .post-loc { color: var(--muted); }
+  .post-actions svg { stroke: var(--ink); }
+  .post-caption .tags { color: var(--pine); }
+  .post-spec { color: var(--rose); border-color: var(--rose); }
+  .post-avatar { background: #1d3a40; color: var(--pine); box-shadow: 0 0 0 2px #0f1b26, 0 0 0 3.5px var(--pine); }
+  .post-img { background: linear-gradient(160deg, #1d4d46 0%, #1b2f4a 55%, #3a2f5e 100%); color: #b9c9cf; }
+
+  /* footer + buttons */
+  footer { border-top-color: var(--line); }
+  .btn { background: var(--pine); color: #08131b; }
+  .btn:hover { background: #fff; color: #08131b; }
+  .btn.ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
+  .btn.ghost:hover { background: var(--ink); color: #08131b; }
+  .tiny { color: var(--muted); }
+
+  @media print {
+    html, body { background: #fff !important; color: #1e2421 !important; }
+    .aurora { display: none; }
+    h1, h2, .work h3, .mini h4, .skill h4, .product-name, .voice-panel, .about p { color: #1e2421 !important; }
+    .work, .mini, .skill, .switcher, .post, .context { background: #fff !important; border-color: #ddd !important; color: #1e2421 !important; }
+  }
+
+  /* ================= Readability + personality pass ================= */
+  :root {
+    --ink: #eef4f2;
+    --muted: #b8c8cc;
+    --card: rgba(255,255,255,.075);
+    --line: rgba(255,255,255,.16);
+    --pink: #ff9cc0;
+  }
+  body { font-size: 18px; line-height: 1.7; }
+  .wrap { max-width: 780px; }
+
+  /* softer, more poetic headings: serif, sentence case */
+  .logo { font-family: "Fraunces", serif; font-weight: 600; text-transform: none; letter-spacing: 0; font-size: 22px; }
+  .logo span { color: var(--rose); font-size: .9em; }
+  nav ul a { text-transform: none; letter-spacing: 0; font-size: 15px; font-weight: 500; }
+  h1 {
+    font-family: "Fraunces", serif; font-weight: 400; text-transform: none; letter-spacing: -.01em;
+    font-size: clamp(40px, 6.4vw, 64px); line-height: 1.1;
+  }
+  h1 em { font-style: italic; }
+  h2 { font-family: "Fraunces", serif; font-weight: 600; text-transform: none; font-size: 34px; line-height: 1.15; letter-spacing: -.005em; }
+  .band h2, footer h2 { font-size: 36px; }
+  .work h3, .mini h4, .skill h4, .product-name, .work.stream h3 {
+    font-family: "Fraunces", serif; font-weight: 600; text-transform: none; letter-spacing: 0;
+  }
+  .work h3, .work.stream h3 { font-size: 27px; line-height: 1.2; }
+  .mini h4, .skill h4 { font-size: 20px; }
+  .product-name { font-size: 24px; }
+  .voice-panel[data-voice="hype"] { font-family: var(--display); }
+
+  /* easier reading */
+  .lead { font-size: 20px; color: #cddbdd; max-width: 620px; }
+  .section-sub { font-size: 17px; margin-bottom: 26px; }
+  .brief { font-size: 17px; color: #c9d7da; }
+  .script p, .work.stream .script p { font-size: 16.5px; line-height: 1.65; color: #e6ecef; }
+  .work.stream .script { background: #1a1726; }
+  .mini p, .skill p { font-size: 15.5px; color: #c3d1d4; }
+  .note, .work.stream .note { font-size: 13.5px; color: #93a6ab; }
+  section { padding: 56px 0; }
+  .work { padding: 34px 34px 30px; margin-bottom: 34px; }
+  .mini, .skill { padding: 22px; }
+
+  /* personality chips */
+  .facts { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 28px 0 0; }
+  .facts li {
+    font-size: 14px; font-weight: 500; color: #e8f0ee;
+    padding: 6px 13px; border-radius: 999px;
+    background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.18);
+  }
+  .facts li:nth-child(3n+1) { border-color: rgba(127,240,198,.5); }
+  .facts li:nth-child(3n+2) { border-color: rgba(182,168,255,.55); }
+  .facts li:nth-child(3n)   { border-color: rgba(255,156,192,.55); }
+  .sparkle { color: var(--pink); }
+
+  @media (max-width: 560px) {
+    body { font-size: 17px; }
+    .work { padding: 24px 20px; }
+    h2 { font-size: 28px; }
+  }
+  @media print { .facts li { border-color: #ccc; color: #1e2421; background: #fff; } }
+</style>
+<style>
+/* Aurora-to-editorial redesign: preserve the original voice and samples */
+:root{--paper:#f7f5ef;--ink:#202b29;--muted:#5c6865;--pine:#245e50;--rose:#bf5285;--line:#e3e2d9;--card:#fff;--blush:#f4e5ed}
+html{background:var(--paper)}body{background:var(--paper);color:var(--ink);font-size:17px;line-height:1.65}
+body>.sky{background:#071521;color:#eef4f2;position:relative;isolation:isolate;overflow:hidden}
+.sky .aurora{position:absolute;z-index:0;filter:blur(30px);opacity:.95}
+.sky:after{content:"";position:absolute;inset:auto 0 0;height:130px;background:linear-gradient(transparent,#071521);pointer-events:none}
+.sky nav,.sky header{position:relative;z-index:2}
+.sky header.hero{padding:86px 0 110px}
+.sky h1{font-family:Fraunces,serif;font-weight:400;font-size:clamp(45px,6.6vw,78px);max-width:750px;line-height:1.12;letter-spacing:-.035em}
+.sky h1 em{color:#a8e9c6}.sky .lead{color:#d4dfdc;max-width:660px;font-size:19px}
+.sky .eyebrow{background:rgba(255,255,255,.07);box-shadow:none;border:1px solid rgba(178,239,211,.55);color:#b8f4d6;letter-spacing:.12em}
+.sky .facts li{background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.17);font-size:13px;color:#e6f0eb}
+.sky .logo,.sky nav ul a{color:#f2f5f2}.sky .logo span{color:#ff9dc4}
+.wrap{max-width:1060px;padding:0 30px}
+.project-index{padding:82px 0 74px;background:var(--paper)}
+.section-heading{display:flex;justify-content:space-between;gap:36px;align-items:end;margin-bottom:32px}
+.section-heading>p{max-width:310px;color:#68736d;font-size:16px;margin:0 0 5px}
+.kicker{font:700 11px 'Space Mono',monospace;letter-spacing:.13em;color:#986381;margin:0 0 12px;text-transform:uppercase}
+h2,.band h2{font:600 clamp(34px,4vw,48px) Fraunces,serif;color:#1d2c28;text-transform:none;letter-spacing:-.035em}
+.pink-dot{color:#c04f83}.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.project-card{display:block;color:inherit;text-decoration:none;background:#fff;border:1px solid #e6e3dc;box-shadow:0 5px 24px rgba(31,44,37,.05);transition:transform .2s,box-shadow .2s;overflow:hidden;border-radius:3px}
+.project-card:hover{transform:translateY(-5px);box-shadow:0 12px 30px rgba(31,44,37,.12);color:inherit}
+.project-art{height:270px;position:relative;overflow:hidden;padding:24px}
+.fight-art{background:radial-gradient(circle at 80% 25%,#513d83 0%,transparent 40%),linear-gradient(130deg,#161425,#292047 70%,#151727);color:#fff}
+.fight-art:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 7px,rgba(255,255,255,.025) 8px 9px);pointer-events:none}
+.onair{font:700 11px 'Space Mono',monospace;color:#ffa4d3;letter-spacing:.06em}
+.fight-big{display:block;font:800 clamp(60px,7vw,92px)/.78 'Barlow Condensed',sans-serif;letter-spacing:-.01em;margin-top:30px;text-shadow:5px 5px 0 #593d8b}
+.fight-big span{color:#ff8dc3;font-size:.6em;vertical-align:top}.fight-small{position:absolute;bottom:20px;left:24px;font:10px 'Space Mono',monospace;color:#c9c1db}
+.nature-art{background:#dce9dc;color:#1e5848;background-image:radial-gradient(circle at 80% 20%,#b2cdb7,transparent 45%),linear-gradient(145deg,#e3eade,#c8d7ca)}
+.leaf-outline{position:absolute;font-size:230px;line-height:1;right:-8px;top:5px;color:rgba(27,92,64,.13);transform:rotate(-22deg)}
+.nature-text{position:relative;font:800 62px/.84 'Barlow Condensed',sans-serif;letter-spacing:.015em;display:block;margin-top:26px}.art-sub{position:absolute;bottom:20px;left:24px;font:700 10px 'Space Mono',monospace;letter-spacing:.07em}
+.writing-card{grid-column:span 2}.writing-art{height:210px;background:#e7d7dc;color:#462d42}.quote-mark{position:absolute;right:35px;top:-60px;font:250px Fraunces,serif;color:rgba(121,57,96,.12)}.writing-text{font:500 52px/.92 Fraunces,serif;display:block;margin:10px 0 0 15px}.writing-text i{color:#a34576}
+.project-meta{display:flex;justify-content:space-between;gap:15px;padding:23px 25px 25px;align-items:start}.project-type{font:700 10px 'Space Mono',monospace;color:#9b5278;letter-spacing:.04em}.project-meta h3{font:600 26px Fraunces,serif;margin:9px 0 6px}.project-meta p{font-size:15px;line-height:1.5;color:#626e69;margin:0}.arrow{font-size:27px;color:#a44d77}
+main.wrap{max-width:900px}main section{padding:70px 0}main .work-intro{margin-bottom:25px}.work-intro .section-sub{color:#66746e}
+.context{background:#e5eee6;border:1px solid #c7d9cc;color:#264538;border-radius:3px}.context strong{color:#235343}
+.work.stream{background:#191725;border:1px solid #282337;box-shadow:5px 5px 0 #a36baf;border-radius:4px}.work.stream.featured{box-shadow:5px 5px 0 #cc729e}
+.work.stream .script{background:#211e2d}.work.stream .brief{color:#c8c0d2}.work.stream .note{color:#afa7bb}
+.work.stream .tag{color:#93e8c7;border-color:#93e8c7;box-shadow:0 3px 0 #93e8c7}.work.stream .tag.pink{color:#ffa6cb;border-color:#ffa6cb;box-shadow:0 3px 0 #ffa6cb}
+.spec-section{border-top:1px solid #d9ddd6;border-bottom:1px solid #d9ddd6}.spec-section .section-sub{max-width:650px;color:#5b6963}
+.mini{background:#fff;border:1px solid #e5e2d9}.mini h4{color:#25332e}.mini p{color:#5c6865}.mini a{color:#23654d}
+.about p{color:#4c5c54}footer{background:#e9eee7;border-top:1px solid #d9e0d6}footer h2{color:#20392f}footer .section-sub{color:#52645a}.btn{background:#285e4e;color:#fff}.btn.ghost{color:#285e4e;border-color:#285e4e}.tiny{color:#65716b}
+@media(max-width:700px){.wrap{padding:0 20px}.section-heading{display:block}.section-heading>p{margin-top:14px}.project-grid{grid-template-columns:1fr}.writing-card{grid-column:auto}.project-art{height:235px}.sky header.hero{padding:55px 0 80px}.fight-big{font-size:76px}.nature-text{font-size:55px}main section{padding:48px 0}}
+@media print{.project-art{height:130px}.sky{background:#fff!important}.project-card{break-inside:avoid}}
+.work.stream .note a{color:#93e8c7}.work.stream .note a:hover{color:#fff}
+.work.stream .script .beat{font:700 11px "Space Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:#8f86a6;margin:20px 0 10px;padding-top:14px;border-top:1px dashed #3a3450}.work.stream .script .beat:first-child{margin-top:0;padding-top:0;border-top:0}.work.stream .script em{color:#fff}
+.h2-sub{font-weight:400;color:#6b7772}
+.poems{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.poem{display:flex;flex-direction:column;gap:12px;min-height:200px;padding:26px 26px 22px;background:#fff;border:1px solid #e6e3dc;border-top:4px solid #bf5285;border-radius:3px;color:inherit;text-decoration:none;box-shadow:0 5px 24px rgba(31,44,37,.05);transition:transform .2s,box-shadow .2s}
+.poem:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(31,44,37,.12);color:inherit}
+.poem-pub{font:700 10.5px 'Space Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#986381}
+.poem-title{font:italic 400 26px/1.2 Fraunces,serif;color:#1d2c28}
+.poem-read{margin-top:auto;font-size:14px;font-weight:600;color:#245e50}
+@media print{.poem{break-inside:avoid;box-shadow:none}}
+.work.stream.collapsible .collapse-body{display:none}
+.work.stream.collapsible.open .collapse-body{display:block;animation:fadeUp .3s ease both}
+.expand{display:inline-flex;align-items:center;gap:8px;margin:4px 0 2px;padding:9px 16px;font:700 13px 'DM Sans',sans-serif;letter-spacing:.04em;color:#93e8c7;background:transparent;border:1.5px solid #93e8c7;border-radius:4px;cursor:pointer}
+.expand:hover{background:#93e8c7;color:#191725}
+.expand:focus-visible{outline:2px solid #ffa6cb;outline-offset:2px}
+.expand .chev{transition:transform .2s}
+.work.stream.open .expand .chev{transform:rotate(180deg)}
+.work.stream.open .expand{margin-bottom:6px}
+.editing .work.stream.collapsible .collapse-body{display:block}
+@media print{.work.stream.collapsible .collapse-body{display:block!important}.expand{display:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.work.stream.collapsible.open .collapse-body{animation:none}}
+</style></head>
+<body>
+<div class="sky">
+<div aria-hidden="true" class="aurora"><span></span><span></span><span></span></div>
+<nav>
+<div class="wrap">
+<a class="logo" href="#">Holly Fine</a>
+<ul>
+<li><a href="#projects">Work</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+</nav>
+<header class="hero">
+<div class="wrap">
+<div class="eyebrow">Copywriter · Brand voice</div>
+<h1>I write brand copy that understands your <em>audience</em>.</h1>
+<p class="lead">I've written sponsor copy for live gaming shows, spoken as a brand to an audience of 190K, and published poetry. I care about finding the exact right word, and about making people want to keep listening.</p>
+</div>
+</header>
+</div>
+<section class="project-index" id="projects"><div class="wrap"><div class="section-heading"><div><h2>Selected work<span class="pink-dot">.</span></h2></div><p>Some things I've written, from live gaming broadcasts to stories on the page.</p></div><div class="project-grid"><a class="project-card fight-card" href="#work"><div class="project-art fight-art"><span class="onair">● LIVE / CROWN CHANNEL</span><span class="fight-big">FIGHT<br/>NIGHT<span>✳</span></span><span class="fight-small">A LOUD, ZANY LIVE SHOW. I WROTE THE SPONSOR COPY.</span></div><div class="project-meta"><div><span class="project-type">PROFESSIONAL WORK</span><h3>Fight Night</h3><p>Branded live-show scripts for Polk Audio, Progressive, JBL &amp; Alienware.</p></div><span class="arrow">↗</span></div></a><a class="project-card" href="#spec"><div class="project-art nature-art"><div class="leaf-outline">✳</div><span class="nature-text">WORDS<br/>WITH<br/>ROOTS.</span><span class="art-sub">PRODUCT &amp; BRAND STORYTELLING</span></div><div class="project-meta"><div><span class="project-type">COMING SOON · SPEC WORK</span><h3>Product stories</h3><p>A home for product copy and short-form brand writing.</p></div><span class="arrow">↗</span></div></a><a class="project-card writing-card" href="#more"><div class="project-art writing-art"><span class="quote-mark">“</span><span class="writing-text">More from<br/>the desk of<br/><i>Holly.</i></span></div><div class="project-meta"><div><span class="project-type">PERSONAL WORK</span><h3>Poems, games &amp; scripts</h3><p>Poetry, narrative games, and other creative work.</p></div><span class="arrow">↗</span></div></a></div></div></section>
+<main class="wrap">
+<section id="work"><div class="work-intro"><p class="kicker">PROFESSIONAL WORK</p><h2>Fight Night <span class="h2-sub">| Amazon's Crown Channel</span></h2><p class="section-sub">A selection from 30 Fight Night episodes I wrote for across 2022–2023.</p></div>
+<div class="context">
+<p><strong>Fight Night</strong> was a weekly live show on Amazon Games' Crown Channel on Twitch. In 2022 I wrote the sponsor integrations: product copy written in each host's voice, aligned to the run of show, then performed and riffed on live.</p>
+</div>
+<!-- FEATURED: Polk Audio -->
+<article class="work featured stream">
+<div class="live-bar"><span class="live-dot">LIVE</span> Fight Night · Crown Channel <span class="viewers">S3 · EP26 · Overwatch 2</span></div>
+<div class="tag-row">
+<span class="tag pink">Favorite</span>
+<span class="tag">Product copy</span>
+<span class="tag">Live script</span>
+</div>
+<h3>Polk Audio: Zen Den vs. Rave Cave</h3>
+<p class="brief">One soundbar and two very different personalities. I split the product read between the hosts as a running bit, so every feature landed twice.</p>
+<div class="clip" style="margin:18px 0 22px;aspect-ratio:16/9;border:0;background:#151521;overflow:hidden;border-radius:8px;">
+<iframe src="https://www.youtube-nocookie.com/embed/VSvlk9mGnrQ?start=70" title="Fight Night — Polk Audio: Zen Den vs. Rave Cave" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width:100%;height:100%;border:0;"></iframe>
+</div>
+<p class="note">Polk Audio script begins at 1:10. <a href="https://www.youtube.com/watch?v=VSvlk9mGnrQ&amp;t=70s" target="_blank" rel="noopener noreferrer">Watch on YouTube</a> · Rewind for full-show context.</p>
+<div class="script">
+<p class="beat">Cold open</p>
+<p><span class="who cb">Chelsea</span>Paul, what the heck are you doing over there?</p>
+<p><span class="who aj">AJ</span>Shhhh, Chelsea, I'm in my <strong>Zen Den</strong>.</p>
+<p><span class="who cb">Chelsea</span>Um, what?</p>
+<p><span class="who aj">AJ</span>Shhhh… My friends over at Polk Audio sent me this incredible soundbar, the Polk Audio Magnifi Max AX. It's ultra-compact, with Dolby Atmos and DTS:X! It also has a 10" wireless subwoofer for an ultra-deep bass experience. I can Chromecast or Apple AirPlay my sweet meditation sounds to it, allowing me to completely shut out the world, and it's like I'm right in the middle of the ocean with the songs of whales to comfort my troubles away.</p>
+<p><span class="who cb">Chelsea</span>Songs of whales to meditate? I swear this is why people never send you anything—</p>
+<p><span class="who aj">AJ</span>I can't hear you, Chelsea, I'm at PEACE!</p>
+<p><span class="who cb">Chelsea</span>Well, I actually got a soundbar of my own from MY friends at Polk Audio. And you know what? Instead of a "Zen Den," I'm making a <strong>Rave Cave</strong>. I set up my Magnifi Max AX with Dolby Atmos and a wireless subwoofer, and I am stoked to have this brand new eleven-speaker, fully immersive sound system going at full blast! And after I'm done doing my cardio in my Rave Cave, I'm going to sit back and enjoy all my games, TV shows and movies with crisp, clear, immersive audio. I can hear every word of dialogue with patented VoiceAdjust technology. Paul, how does that sound?</p>
+<p><span class="who aj">AJ</span>You know what, Chelsea, I didn't listen to a word you were saying. I was in total Zen.</p>
+<p><span class="who aj">AJ</span>All Polk Audio soundbars are on sale now. I think you guys know what I'm about to say… Chelsea, you wanna say it with me?</p>
+<p><span class="who">Both</span><strong>SCAN THAT QR CODE!</strong></p>
+<p class="beat">Giveaway read</p>
+<p><span class="who cb">Chelsea</span>With the Polk Audio Signa S4 you get cinema-quality sound at a value you couldn't imagine. This seven-speaker soundbar gives you powerful sound and deep bass with a wireless subwoofer, all with the vocal clarity of Polk's VoiceAdjust technology. Guess the correct answer to trivia this round and you'll have a chance to win!</p>
+<p class="beat">Giveaway trivia</p>
+<p><span class="who">Trivia</span>Who started Polk? (a) President James Polk after losing his reelection bid (b) The country of Poland, to promote better sound for polka music (c) Matthew Polk, in Baltimore, in 1972</p>
+</div>
+<p class="note">Fight Night, Season 3 · Nov 2022 · Crown Channel (Amazon Games)</p>
+</article>
+<!-- Progressive -->
+<article class="work stream collapsible">
+<div class="live-bar"><span class="live-dot">LIVE</span> Fight Night · Crown Channel <span class="viewers">S3 · Finale · League of Legends</span></div>
+<div class="tag-row">
+<span class="tag">Call to action</span>
+<span class="tag">Non-endemic brand</span>
+</div>
+<h3>Progressive: "Scan the code"</h3>
+<p class="brief">Car insurance on a gaming show, with one message to land: save nearly $700. I turned the call to action into a running gag the audience could expect.</p>
+<button class="expand" type="button" aria-expanded="false" aria-controls="fn-0"><span class="expand-label">Watch &amp; read the script</span> <span class="chev" aria-hidden="true">▾</span></button>
+<div class="collapse-body" id="fn-0">
+<div class="clip" style="margin:18px 0 22px;aspect-ratio:16/9;border:0;background:#151521;overflow:hidden;border-radius:8px;">
+<iframe src="https://www.youtube-nocookie.com/embed/wqkI4Fn2D6c?start=98" title="Fight Night — Progressive: Scan the code" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width:100%;height:100%;border:0;"></iframe>
+</div>
+<p class="note">Progressive script begins at 1:38. <a href="https://www.youtube.com/watch?v=wqkI4Fn2D6c&t=98s" target="_blank" rel="noopener noreferrer">Watch on YouTube</a> · Rewind for full-show context.</p>
+<div class="script">
+<p class="beat">Cold open</p>
+<p><span class="who aj">AJ</span>If you've never seen Fight Night before, welcome to the Season 3 finale. And today, Fight Night is brought to you by Progressive: people who save by switching to Progressive save nearly $700. Just letting you know, Chelsea.</p>
+<p><span class="who cb">Chelsea</span>You always direct these things at me, Paul, and if anything I should be telling you this. You are, and continue to be, an absolute liability on this show.</p>
+<p><span class="who aj">AJ</span>What? I'm not a liability, I'm the voice of reason, Chelsea! And this voice of reason, chat, is telling you to scan the dang QR code! You wanna save big? Scan the code. You want nearly $700 in savings for new customers? Scan the code. You wanna squad up with Flo? Scan the code. You want Chelsea's mic muted? <strong>Scan the code.</strong> I bring the pizzazz to this show, you know what I'm saying?</p>
+<p><span class="who cb">Chelsea</span>I don't, and I don't think production does either.</p>
+<p class="beat">Toss to break</p>
+<p><span class="who aj">AJ</span>Chat, don't go AFK on these savings. We'll be back with more Fight Night after these savings…</p>
+<p class="beat">Branded segment</p>
+<p><span class="who cb">Chelsea</span>It's our finale, and what better way to end a season than with Progressive? Normally we don't get any context for what we're about to watch, but because this is a special episode, I've been told we're going to look at some moments from this show where we could have really used some <strong>coverage</strong>.</p>
+<p><span class="who cb">Chelsea</span>Looking back at all the times I needed coverage makes me want to remind y'all that Progressive has incredible coverage, and switching could save you nearly $700 on average.</p>
+<p class="beat">Final toss to break</p>
+<p><span class="who aj">AJ</span>When you see that QR code on screen, I want you to scan like you've never scanned before, like you've been training for this moment your whole life. Don't let me down, chat. I'm counting on you. <strong>Scan it.</strong></p>
+<p class="beat">Outro</p>
+<p><span class="who cb">Chelsea</span>A big thank you to our partner Progressive for being with us for this season finale. And remember, y'all: people who save by switching to Progressive save nearly $700. That's a lot of dang money.</p>
+</div>
+<p class="note">Fight Night Season 3 finale · Dec 2022</p>
+</div>
+</article>
+<!-- JBL -->
+<article class="work stream collapsible">
+<div class="live-bar"><span class="live-dot">LIVE</span> Fight Night · Crown Channel <span class="viewers">S3 · EP28 · Apex Legends</span></div>
+<div class="tag-row">
+<span class="tag">Product copy</span>
+<span class="tag">Character voice</span>
+</div>
+<h3>JBL Quantum: "I'm kinda a big deal"</h3>
+<p class="brief">A headset spec sheet rewritten as one host's bragging, with the other host's comeback delivering the call to action.</p>
+<button class="expand" type="button" aria-expanded="false" aria-controls="fn-1"><span class="expand-label">Watch &amp; read the script</span> <span class="chev" aria-hidden="true">▾</span></button>
+<div class="collapse-body" id="fn-1">
+<div class="clip" style="margin:18px 0 22px;aspect-ratio:16/9;border:0;background:#151521;overflow:hidden;border-radius:8px;">
+<iframe src="https://www.youtube-nocookie.com/embed/8Fm4hgRSUc0?start=60" title="Fight Night — JBL Quantum" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width:100%;height:100%;border:0;"></iframe>
+</div>
+<p class="note">JBL script begins at 1:00. <a href="https://www.youtube.com/watch?v=8Fm4hgRSUc0&amp;t=60s" target="_blank" rel="noopener noreferrer">Watch on YouTube</a> · Rewind for full-show context.</p>
+<div class="script">
+<p class="beat">Cold open</p>
+<p><span class="who aj">AJ</span>Now Chelsea, I'm not sure if you're aware of this, but I'm kinda a big deal.</p>
+<p><span class="who cb">Chelsea</span>Oh, are you now?</p>
+<p><span class="who aj">AJ</span>Yes, I am. Not only because of my incredible personality and dashing looks, but also because I'm rocking my new JBL Quantum Ones. Chat, look at how good I look! With my JBL Quantum Ones, I, <em>personally</em>, can change the game. I get hyper-accurate, immersive sound to hear every. single. detail. in the world around me. Remember when we played Overwatch 2 and I was carrying the team like a backpack? And you guys did nothing? NOT ANYMORE. I've got a direct line to hear every ping, every footstep, all with the superior sound of JBL Quantum. You can't stop me now, Chelsea!</p>
+<p><span class="who cb">Chelsea</span>Chat, I don't know why Paul feels the need to take up so much room on this show. If you want the competitive advantage to take on any challenge, like trying to host a show with Paul, you need JBL Quantum. Scan the QR code or hit the link in chat to find the perfect headset for you.</p>
+<p class="beat">Toss to gameplay</p>
+<p><span class="who aj">AJ</span>You know what else we deserve, Chelsea? Superior sound from our new JBL Quantum gaming headsets. It's time to become Legends. Let's go!</p>
+<p class="beat">Final toss to break</p>
+<p><span class="who aj">AJ</span>As a reminder, chat: you can't change the game unless you have game-changing audio. I've been rocking this JBL Quantum gaming headset all show, and you can too. When you see my beautiful face on screen, <strong>SCAN THAT CODE</strong>.</p>
+</div>
+<p class="note">Fight Night Season 3 · Dec 2022</p>
+</div>
+</article>
+<!-- Alienware -->
+<article class="work stream collapsible">
+<div class="live-bar"><span class="live-dot">LIVE</span> Fight Night · Crown Channel <span class="viewers">S3 · EP27 · New World</span></div>
+<div class="tag-row">
+<span class="tag">Technical product</span>
+<span class="tag">Giveaway</span>
+</div>
+<h3>Alienware: Better together</h3>
+<p class="brief">Two hosts, two halves of a gaming setup. A list of hardware specs became a sibling rivalry that ended in a giveaway.</p>
+<button class="expand" type="button" aria-expanded="false" aria-controls="fn-2"><span class="expand-label">Watch &amp; read the script</span> <span class="chev" aria-hidden="true">▾</span></button>
+<div class="collapse-body" id="fn-2">
+<div class="clip" style="margin:18px 0 22px;aspect-ratio:16/9;border:0;background:#151521;overflow:hidden;border-radius:8px;">
+<iframe src="https://www.youtube-nocookie.com/embed/bTSjkbQV778?start=71" title="Fight Night — Alienware" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width:100%;height:100%;border:0;"></iframe>
+</div>
+<p class="note">Alienware script begins at 1:11. <a href="https://www.youtube.com/watch?v=bTSjkbQV778&amp;t=71s" target="_blank" rel="noopener noreferrer">Watch on YouTube</a> · Rewind for full-show context.</p>
+<div class="script">
+<p class="beat">Cold open</p>
+<p><span class="who aj">AJ</span>Chelsea, I hear you got a few new gifts…</p>
+<p><span class="who cb">Chelsea</span>Why yes, these are a few new gifts from my friends at Alienware. They gave me an incredible laptop and monitor last time, and followed it up with a 38-inch Alienware ultrawide curved gaming monitor and a tri-mode wireless gaming mouse. This monitor has lifelike color with VESA DisplayHDR 600 matched with G-SYNC: stunning contrast, cinematic color and ultra-low latency gameplay. And the mouse has 26,000 DPI. Over wireless USB-C or Bluetooth, you get over 140 hours of game time on one charge. Paul, how are you going to top this?</p>
+<p><span class="who aj">AJ</span>Right off the bat, Chelsea, I don't see a computer as part of your set. Not just a computer, a friggin' gaming <strong>desktop</strong>. For you, Chelsea, I'm going to break this down.</p>
+<p><span class="who cb">Chelsea</span>You know what, I see what they did. I think they wanted us to work together, because you can't play on a gaming desktop without a monitor and mouse. We'd have to combine your gear and my gear to get the ultimate Alienware desktop gaming rig. Alienware, I appreciate the gifts, but have you ever tried playing a game with Paul? It is the most frustrating, painful thing I have ever done. You're always screaming, with your sweaty, gross Cheeto fingers and beard hair all over the keybo—</p>
+<p><span class="who aj">AJ</span><strong>ANYWAY.</strong> We're giving this bad boy away! You don't have to barter a deal with Chelsea. We did it once, and we're doing it again! Stick around till the end of the show for a chance to win by typing !Alienware into the chat.</p>
+<p class="beat">Toss to gameplay</p>
+<p><span class="who aj">AJ</span>Alright chat, are you ready for a new fantastic point of view? Don't you dare close your eyes… it's time for a whole Neeeew Wooooorld! Let's go!</p>
+</div>
+<p class="note">Fight Night Season 3 · Nov 2022</p>
+</div>
+</article>
+</section>
+
+<section class="spec-section" id="spec"><p class="kicker">IN PROGRESS</p><h2>Product stories</h2><p class="section-sub">A space for product descriptions, email copy, and social writing. Spec projects will be clearly labeled when added.</p></section>
+<section id="poetry">
+<p class="kicker">Poetry</p>
+<h2>Published poems</h2>
+<p class="section-sub">Poetry uses precise language to convey a real feeling. It's the same instinct I bring to copy.</p>
+<div class="poems">
+<a class="poem" href="https://minervarising.com/i-was-supposed-to-stay-out-when-the-bedroom-door-was-closed-by-holly-fine/" target="_blank" rel="noopener noreferrer">
+<span class="poem-pub">Minerva Rising · The Keeping Room · 2024</span>
+<span class="poem-title">I Was Supposed to Stay Out When the Bedroom Door Was Closed</span>
+<span class="poem-read">Read the poem ↗</span>
+</a>
+<a class="poem" href="https://anacapareview.com/holly-fine/" target="_blank" rel="noopener noreferrer">
+<span class="poem-pub">Anacapa Review · Vol. 2, No. 5 · 2024</span>
+<span class="poem-title">Mrs. Self Destruct</span>
+<span class="poem-read">Read the poem ↗</span>
+</a>
+</div>
+</section>
+<section id="more">
+<h2>More writing</h2>
+<p class="section-sub">Other formats and voices.</p>
+<div class="grid">
+<div class="mini">
+<h4>Brand voice, live</h4>
+<p>I was the voice of Crown Channel in Twitch chat, writing in real time for an audience of 190K+.</p>
+</div>
+<div class="mini">
+<h4>Poetry</h4>
+<p>Published poet. <a href="#poetry">Read a few poems →</a></p>
+</div>
+<div class="mini">
+<h4>Indie games</h4>
+<p>Wrote and shipped <em>Love in the Bad Place</em> and <em>Image Bringer</em>. <a href="https://holleeze.itch.io/" target="_blank" rel="noopener noreferrer">Play on itch.io →</a></p>
+</div>
+<div class="mini">
+<h4>Scripts &amp; story</h4>
+<p>I wrote script coverage for di Bonaventura Pictures at Paramount. I also wrote <em>My Cat Sassa</em>, an animated pilot that placed as a quarterfinalist four times: ScreenCraft Animation Competition (2021), Stage 32 New Voices in Animation (2021), Stage 32 Female Driven Screenwriting (2023), and WeScreenplay TV Pilot Lab (2022). Script available on request.</p>
+</div>
+</div>
+</section>
+<section class="about" id="about">
+<h2>About</h2>
+<p>I'm a Los Angeles writer who has worked in film and games: script coverage at di Bonaventura Pictures/Paramount, production at Team Liquid, and live brand voice for Amazon Games' Crown Channel. I've also done stand-up, which taught me that every word has to earn its place.</p>
+<p>I studied history and creative writing at UC Berkeley. Outside of work, I'm usually streaming, writing poems, or taking photos of my Maine Coon, Ramsay.</p>
+</section>
+</main>
+<footer id="contact">
+<div class="wrap">
+<h2>Let's work together.</h2>
+<p class="section-sub">I'm open to copywriting and brand voice roles.</p>
+<a class="btn" href="mailto:finallyholly@gmail.com">Email me</a>
+<a class="btn ghost" href="https://www.linkedin.com/in/hollyfine" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<p class="tiny">© 2026 Holly Fine</p>
+</div>
+</footer>
+<script>
+document.querySelectorAll('.voices button').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var v = btn.getAttribute('data-voice');
+    document.querySelectorAll('.voices button').forEach(function (b) { b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+    document.querySelectorAll('.voice-panel').forEach(function (p) { p.classList.toggle('on', p.getAttribute('data-voice') === v); });
+  });
+});
+</script>
+<script>
+document.querySelectorAll('.work.stream.collapsible .expand').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var card = btn.closest('.work');
+    var open = card.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.querySelector('.expand-label').textContent = open ? 'Hide the script' : 'Watch & read the script';
+  });
+});
+</script>
+<!-- Edit mode: open the page with ?edit at the end of the address to type on it.
+     Visitors never see this toolbar. -->
+<script>
+(function () {
+  if (!/[?&]edit\b/.test(location.search)) return;
+  var bar = document.createElement('div');
+  bar.id = 'edit-bar';
+  bar.setAttribute('style', 'position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:9999;display:flex;gap:8px;align-items:center;background:#2b2a33;color:#fff;padding:10px 14px;border-radius:8px;font:600 14px "DM Sans",sans-serif;box-shadow:0 6px 20px rgba(0,0,0,.25)');
+  bar.innerHTML = '<span>Edit mode: click any text to type</span>' +
+    '<button id="edit-save" style="font:inherit;background:#c9647a;color:#fff;border:0;border-radius:6px;padding:7px 14px;cursor:pointer">Download my edits</button>';
+  document.body.appendChild(bar);
+  document.designMode = 'on';
+  document.body.classList.add('editing');
+  bar.contentEditable = 'false';
+  document.getElementById('edit-save').onclick = function () {
+    document.designMode = 'off';
+    var clone = document.documentElement.cloneNode(true);
+    var b = clone.querySelector('#edit-bar'); if (b) b.remove();
+    var bd = clone.querySelector('body'); if (bd) bd.classList.remove('editing');
+    var html = '<!DOCTYPE html>\n' + clone.outerHTML;
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([html], { type: 'text/html' }));
+    a.download = 'index.html';
+    a.click();
+    document.designMode = 'on';
+  };
+})();
+</script>
+</body>
+</html>
