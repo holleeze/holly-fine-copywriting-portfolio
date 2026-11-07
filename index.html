@@ -593,6 +593,46 @@ main.wrap{max-width:900px}main section{padding:70px 0}main .work-intro{margin-bo
 @media print{.work.stream.collapsible .collapse-body{display:block!important}.expand{display:none}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.work.stream.collapsible.open .collapse-body{animation:none}}
+.in-print{margin:22px 0 0;font-size:15px;color:#5c6865}.in-print em{color:#1d2c28}
+@media(max-width:700px){.nature-text{font-size:44px;margin-top:18px}.leaf-outline{font-size:170px;right:-34px;top:10px;color:rgba(27,92,64,.09)}.fight-big{font-size:64px}}
+.chat-card{grid-column:1/-1}
+.chat-panel{margin-top:18px;background:#18171f;border-radius:6px;padding:14px 16px;display:flex;flex-direction:column;gap:10px;border:1px solid #2a2836}
+.chat-msg{font-size:14.5px;line-height:1.5;color:#e7e4ee}
+.chat-badge{display:inline-block;width:18px;height:18px;line-height:18px;text-align:center;font-size:11px;background:#a970ff;color:#fff;border-radius:3px;margin-right:6px;vertical-align:1px}
+.chat-user{font-weight:700;color:#bf94ff;margin-right:6px}
+.chat-user:after{content:":";color:#e7e4ee}
+.chat-cmd{font:700 12px 'Space Mono',monospace;color:#93e8c7;margin-right:6px}
+.chat-brand{display:inline-block;margin-left:8px;font:700 10px 'Space Mono',monospace;letter-spacing:.05em;text-transform:uppercase;color:#8f86a6;border:1px solid #3a3450;border-radius:3px;padding:0 5px;vertical-align:1px}
+.chat-note{font-size:13px!important;color:#7a857f!important;margin-top:10px!important}
+@media print{.chat-panel{background:#fff;border-color:#ddd}.chat-msg{color:#222}}
+.spec-disclaimer{font-size:13.5px;color:#7a857f;margin:-10px 0 28px}
+.spec-product{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);background:#fff;border:1px solid #e6e3dc;border-radius:3px;overflow:hidden;box-shadow:0 5px 24px rgba(31,44,37,.05);margin-bottom:26px}
+.sp-img{min-height:360px;background:linear-gradient(150deg,#dce9dc,#c8d7ca);display:flex;align-items:center;justify-content:center;color:#4c6b5c;font-size:14px}
+.sp-img img,.sp-post-img img{width:100%;height:100%;object-fit:cover;display:block}
+.sp-copy{padding:30px 32px}
+.sp-kicker{font:700 10.5px 'Space Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#986381;margin:0 0 10px}
+.sp-name{font:600 28px Fraunces,serif;margin:0 0 10px;color:#1d2c28}
+.sp-hook{font:italic 400 21px/1.35 Fraunces,serif;color:#245e50;margin:0 0 14px}
+.sp-story{font-size:16px;color:#4c5c54;margin:0 0 16px}
+.sp-features{margin:0;padding-left:18px;color:#3d4b45;font-size:15.5px}.sp-features li{margin-bottom:6px}
+.spec-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;align-items:start}
+.sp-post{background:#fff;border:1px solid #dbdbdb;border-radius:8px;overflow:hidden}
+.sp-post-head{display:flex;align-items:center;gap:10px;padding:11px 14px}
+.sp-avatar{width:30px;height:30px;border-radius:50%;background:#245e50;color:#fff;font:700 12px 'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center}
+.sp-handle{font-weight:600;font-size:14px}
+.sp-tag{margin-left:auto;font:700 10px 'Space Mono',monospace;text-transform:uppercase;color:#9b5278;border:1.5px solid #9b5278;border-radius:4px;padding:1px 6px}
+.sp-post-img{aspect-ratio:4/5;background:linear-gradient(160deg,#cfe3dc,#e4eff2 55%,#f3d9d6);display:flex;align-items:center;justify-content:center;color:#557079;font-size:14px}
+.sp-caption{font-size:14px;line-height:1.5;padding:12px 14px 16px;margin:0}.sp-caption b{margin-right:4px}.sp-hash{color:#245e50}
+.sp-email{background:#fff;border:1px solid #e6e3dc;border-radius:3px;padding:24px 24px 26px}
+.sp-inbox{border:1px solid #ecebe5;border-radius:4px;margin-bottom:16px}
+.sp-row{display:flex;gap:12px;padding:9px 12px;font-size:14.5px;border-bottom:1px solid #ecebe5}.sp-row:last-child{border-bottom:0}
+.sp-label{width:62px;flex:none;font:700 10.5px 'Space Mono',monospace;text-transform:uppercase;color:#8a958f;padding-top:3px}
+.sp-subject{font-weight:600;color:#1d2c28}.sp-pre{color:#66746e}
+.sp-body{font-size:15.5px;color:#4c5c54;margin:0 0 16px}
+.sp-cta{display:inline-block;background:#245e50;color:#fff;font-weight:700;font-size:14px;padding:10px 20px;border-radius:3px}
+@media(max-width:700px){.spec-product,.spec-pair{grid-template-columns:1fr}.sp-img{min-height:240px}.sp-copy{padding:24px 22px}}
+@media print{.spec-product,.sp-post,.sp-email{break-inside:avoid;box-shadow:none}}
+.sp-img{position:relative}.photo-credit{position:absolute;right:10px;bottom:8px;font-size:11px;color:#fff;background:rgba(0,0,0,.35);padding:2px 7px;border-radius:3px}
 </style></head>
 <body>
 <div class="sky">
@@ -611,11 +651,11 @@ main.wrap{max-width:900px}main section{padding:70px 0}main .work-intro{margin-bo
 <div class="wrap">
 <div class="eyebrow">Copywriter · Brand voice</div>
 <h1>I write brand copy that understands your <em>audience</em>.</h1>
-<p class="lead">I've written sponsor copy for live gaming shows, spoken as a brand to an audience of 190K, and published poetry. I care about finding the exact right word, and about making people want to keep listening.</p>
+<p class="lead">I've written sponsor copy for live gaming shows, spoken as a brand to an audience of 190K, and published poetry. I care about precise language and maintaining a consistent voice. I love making an audience connect with the copy.</p>
 </div>
 </header>
 </div>
-<section class="project-index" id="projects"><div class="wrap"><div class="section-heading"><div><h2>Selected work<span class="pink-dot">.</span></h2></div><p>Some things I've written, from live gaming broadcasts to stories on the page.</p></div><div class="project-grid"><a class="project-card fight-card" href="#work"><div class="project-art fight-art"><span class="onair">● LIVE / CROWN CHANNEL</span><span class="fight-big">FIGHT<br/>NIGHT<span>✳</span></span><span class="fight-small">A LOUD, ZANY LIVE SHOW. I WROTE THE SPONSOR COPY.</span></div><div class="project-meta"><div><span class="project-type">PROFESSIONAL WORK</span><h3>Fight Night</h3><p>Branded live-show scripts for Polk Audio, Progressive, JBL &amp; Alienware.</p></div><span class="arrow">↗</span></div></a><a class="project-card" href="#spec"><div class="project-art nature-art"><div class="leaf-outline">✳</div><span class="nature-text">WORDS<br/>WITH<br/>ROOTS.</span><span class="art-sub">PRODUCT &amp; BRAND STORYTELLING</span></div><div class="project-meta"><div><span class="project-type">COMING SOON · SPEC WORK</span><h3>Product stories</h3><p>A home for product copy and short-form brand writing.</p></div><span class="arrow">↗</span></div></a><a class="project-card writing-card" href="#more"><div class="project-art writing-art"><span class="quote-mark">“</span><span class="writing-text">More from<br/>the desk of<br/><i>Holly.</i></span></div><div class="project-meta"><div><span class="project-type">PERSONAL WORK</span><h3>Poems, games &amp; scripts</h3><p>Poetry, narrative games, and other creative work.</p></div><span class="arrow">↗</span></div></a></div></div></section>
+<section class="project-index" id="projects"><div class="wrap"><div class="section-heading"><div><h2>Selected work<span class="pink-dot">.</span></h2></div></div><div class="project-grid"><a class="project-card fight-card" href="#work"><div class="project-art fight-art"><span class="onair">● LIVE / CROWN CHANNEL</span><span class="fight-big">FIGHT<br/>NIGHT<span>✱︎</span></span><span class="fight-small">A LOUD, ZANY LIVE SHOW. I WROTE THE SPONSOR COPY.</span></div><div class="project-meta"><div><span class="project-type">PROFESSIONAL WORK</span><h3>Fight Night</h3><p>Branded live-show scripts for Polk Audio, Progressive, JBL &amp; Alienware.</p></div><span class="arrow">↗</span></div></a><a class="project-card" href="#spec"><div class="project-art nature-art"><div class="leaf-outline">✱︎</div><span class="nature-text">ON<br/>SPEC.</span><span class="art-sub">PRODUCT &amp; BRAND STORYTELLING</span></div><div class="project-meta"><div><span class="project-type">SPEC WORK</span><h3>Product stories</h3><p>A home for product copy and short-form brand writing.</p></div><span class="arrow">↗</span></div></a><a class="project-card writing-card" href="#more"><div class="project-art writing-art"><span class="quote-mark">“</span><span class="writing-text">More from<br/>the desk of<br/><i>Holly.</i></span></div><div class="project-meta"><div><span class="project-type">PERSONAL WORK</span><h3>Poems, games &amp; scripts</h3><p>Poetry, narrative games, and other creative work.</p></div><span class="arrow">↗</span></div></a></div></div></section>
 <main class="wrap">
 <section id="work"><div class="work-intro"><p class="kicker">PROFESSIONAL WORK</p><h2>Fight Night <span class="h2-sub">| Amazon's Crown Channel</span></h2><p class="section-sub">A selection from 30 Fight Night episodes I wrote for across 2022–2023.</p></div>
 <div class="context">
@@ -747,11 +787,54 @@ main.wrap{max-width:900px}main section{padding:70px 0}main .work-intro{margin-bo
 </article>
 </section>
 
-<section class="spec-section" id="spec"><p class="kicker">IN PROGRESS</p><h2>Product stories</h2><p class="section-sub">A space for product descriptions, email copy, and social writing. Spec projects will be clearly labeled when added.</p></section>
+<section class="spec-section" id="spec"><p class="kicker">ON SPEC</p><h2>Product stories</h2><p class="section-sub">Spec copy for an outdoor brand.</p>
+<p class="spec-disclaimer">Not commissioned by or affiliated with any brand.</p>
+
+<!-- PIECE 1: product page -->
+<article class="spec-product">
+  <div class="sp-img">
+    <img src="daypack.png" alt="Lavender waxed canvas daypack">
+    <span class="photo-credit">Photo: Erik Mclean / Pexels</span>
+  </div>
+  <div class="sp-copy">
+    <p class="sp-kicker">Product description</p>
+    <h3 class="sp-name">Måne Daypack</h3>
+    <p class="sp-hook">On the trail with you from dawn to twilight.</p>
+    <p class="sp-story">The Måne Daypack is made from water-resistant waxed canvas, ready for hikes through snowy forests or mystical deserts.</p>
+    <ul class="sp-features">
+      <li>Straps that rest easy on your back for a comfortable carry, mile after mile.</li>
+      <li>Insulated pockets keep your lunch and snacks warm or cool as you settle in to watch the moon rise.</li>
+      <li>Easy-access pockets hold a headlamp, so your adventure can continue under a lavender sky.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- PIECE 2: social post + email -->
+<div class="spec-pair">
+  <article class="sp-post">
+    <div class="sp-post-head"><span class="sp-avatar">L</span><span class="sp-handle">lavendelmane</span><span class="sp-tag">Spec</span></div>
+    <div class="sp-post-img">
+      <!-- Your photo: replace this line with <img src="your-photo.jpg" alt="describe it"> -->
+      <span>Your photo</span>
+    </div>
+    <p class="sp-caption"><b>lavendelmane</b> [Your caption. Under 40 words, ends with a question.] <span class="sp-hash">#hashtag</span></p>
+  </article>
+  <article class="sp-email">
+    <p class="sp-kicker">Email</p>
+    <div class="sp-inbox">
+      <div class="sp-row"><span class="sp-label">From</span><span>Lavendelmåne</span></div>
+      <div class="sp-row"><span class="sp-label">Subject</span><span class="sp-subject">[Subject line]</span></div>
+      <div class="sp-row"><span class="sp-label">Preview</span><span class="sp-pre">[Preheader, 10 words or fewer]</span></div>
+    </div>
+    <p class="sp-body">[Two sentences of email body copy.]</p>
+    <span class="sp-cta">[Button text]</span>
+  </article>
+</div>
+</section>
 <section id="poetry">
 <p class="kicker">Poetry</p>
 <h2>Published poems</h2>
-<p class="section-sub">Poetry uses precise language to convey a real feeling. It's the same instinct I bring to copy.</p>
+<p class="section-sub">Poetry is about finding the exact words for a real feeling or image. It's the same instinct I bring to copy.</p>
 <div class="poems">
 <a class="poem" href="https://minervarising.com/i-was-supposed-to-stay-out-when-the-bedroom-door-was-closed-by-holly-fine/" target="_blank" rel="noopener noreferrer">
 <span class="poem-pub">Minerva Rising · The Keeping Room · 2024</span>
@@ -764,14 +847,23 @@ main.wrap{max-width:900px}main section{padding:70px 0}main .work-intro{margin-bo
 <span class="poem-read">Read the poem ↗</span>
 </a>
 </div>
+<p class="in-print">Also in print: “The El Camino” and “I Let Poetry Into My Life and This Is What She Did” in <em>The Poeming Pigeon</em> (2024)</p>
 </section>
 <section id="more">
 <h2>More writing</h2>
 <p class="section-sub">Other formats and voices.</p>
 <div class="grid">
-<div class="mini">
-<h4>Brand voice, live</h4>
-<p>I was the voice of Crown Channel in Twitch chat, writing in real time for an audience of 190K+.</p>
+<div class="mini chat-card">
+<h4>Live brand voice</h4>
+<p>I was the voice of Crown Channel in Twitch chat, writing in real time for an audience of 190K+. These are chat commands I wrote for live shows, which is copy that had to land in one line.</p>
+<div class="chat-panel">
+<div class="chat-msg"><span class="chat-badge">♛</span><span class="chat-user">Crown</span><span class="chat-cmd">!comfy</span><span class="chat-text">Don't be a sweaty gamer IRL. Cotton breathes and absorbs moisture to keep you dry and comfortable. Get yours now!</span><span class="chat-brand">Cotton</span></div>
+<div class="chat-msg"><span class="chat-badge">♛</span><span class="chat-user">Crown</span><span class="chat-cmd">!samsung</span><span class="chat-text">One misstep can mean the difference between victory and defeat. Change your game with the Odyssey OLED G9's hair-raising 0.03ms response and 240Hz refresh rate.</span><span class="chat-brand">Samsung</span></div>
+<div class="chat-msg"><span class="chat-badge">♛</span><span class="chat-user">Crown</span><span class="chat-cmd">!gift</span><span class="chat-text">Get the perfect gift for the gamer in your life w/ deals on games, headsets, controllers & more!</span><span class="chat-brand">Amazon</span></div>
+<div class="chat-msg"><span class="chat-badge">♛</span><span class="chat-user">Crown</span><span class="chat-cmd">!show</span><span class="chat-text">You're watching Pit Crew, where gamers go head to head with upgraded and downgraded PCs!</span><span class="chat-brand">Show info</span></div>
+<div class="chat-msg"><span class="chat-badge">♛</span><span class="chat-user">Crown</span><span class="chat-cmd">!thanks</span><span class="chat-text">Thank you for tuning into Crown's last stream! Leave any love or good vibes for Crown here. Thanks for being an amazing part of this community!</span><span class="chat-brand">Final stream</span></div>
+</div>
+<p class="chat-note">Crown Channel, 2023</p>
 </div>
 <div class="mini">
 <h4>Poetry</h4>
@@ -789,8 +881,8 @@ main.wrap{max-width:900px}main section{padding:70px 0}main .work-intro{margin-bo
 </section>
 <section class="about" id="about">
 <h2>About</h2>
-<p>I'm a Los Angeles writer who has worked in film and games: script coverage at di Bonaventura Pictures/Paramount, production at Team Liquid, and live brand voice for Amazon Games' Crown Channel. I've also done stand-up, which taught me that every word has to earn its place.</p>
-<p>I studied history and creative writing at UC Berkeley. Outside of work, I'm usually streaming, writing poems, or taking photos of my Maine Coon, Ramsay.</p>
+<p>I'm a Los Angeles writer who has worked in film and games. I've done script coverage at di Bonaventura Pictures/Paramount, production at Team Liquid, and live brand voice and copywriting for Amazon Games' Crown Channel. I've also performed stand-up, which taught me precision in language.</p>
+<p>I studied history and creative writing at UC Berkeley. Outside of work, I'm usually experiencing Los Angeles nature, hiking at Griffith Park, writing poems, or taking photos of my Maine Coon cat, Ramsay.</p>
 </section>
 </main>
 <footer id="contact">
